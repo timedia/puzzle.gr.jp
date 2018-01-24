@@ -1,13 +1,3 @@
-{% comment %}
-<!--
-- If tag_names array is not passed in as argument,
-  - Create an empty array,
-  - Obtain a tag name and push it to the array, and
-  - Sort the tag names.
-- List tags as a tag cloud.
--->
-{% endcomment %}
-
 {% if include.tag_names %}
   {% assign tag_names = include.tag_names %}
 
