@@ -1,0 +1,50 @@
+---
+layout: default
+title: ニュース &amp; ブログ
+---
+
+<div class="catch blog">
+
+    {%- include header.html -%}
+
+    <div class="container">
+        <h2 class="sunbpage-title">ニュース &amp; ブログ</h2>
+        <p>PUZZLE GENERATOR JAPAN の様々な情報をお届けします。</p>
+    </div>
+
+</div>
+
+<div class="row container">
+
+    <div class="col-lg-9 blog-list">
+        <ul>
+
+            {% for post in site.posts %}
+
+            <li class="blog-list-item">
+                <div class="blog-list-date"><time>{{ post.date | date: '%Y-%m-%d' }}</time></div>
+                <div class="blog-list-tag"><a href="{{ site.baseurl }}/tags#{{ post.tags }}">{{ post.tags }}</a></div>
+                <div class="blog-list-title"> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></div>
+                <div class="blog-list-excerpt">{{ post.excerpt }}</div>
+            </li>
+
+            {% endfor %}
+
+        </ul>
+    </div>
+    
+    <div class="col-lg-3 blog-side-nav">
+
+        <div class="blog-side-nav-category">
+            <h3 class="blog-side-nav-title"><a href="{{ site.baseurl }}/tags">Tags</a></h3>
+            {%- include tag_cloud.html -%}
+
+        </div>
+
+        <div class="blog-side-nav-archive">
+            <h3 class="blog-side-nav-title"><a href="{{ site.baseurl }}/Archive">Archive</a></h3>
+            {%- include post_archive.html -%}
+        </div>
+
+    </div>
+</div>
