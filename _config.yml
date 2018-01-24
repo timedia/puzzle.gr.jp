@@ -3,9 +3,6 @@ title: Puzzle Generater Japan
 description: >
   タイムインターメディアが提供する、独自AIを搭載したナンプレパズル自動生成エンジン。オープンソースです。
 
-baseurl: "https://timedia.github.io/puzzle.gr.jp/"
-url: "https://timedia.github.io/puzzle.gr.jp/"
-
 author:
   name: TIMEINTERMEDIA
 
