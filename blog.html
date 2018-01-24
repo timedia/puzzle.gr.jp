@@ -24,7 +24,7 @@ title: ニュース &amp; ブログ
             <li class="blog-list-item">
                 <div class="blog-list-date"><time>{{ post.date | date: '%Y-%m-%d' }}</time></div>
                 <div class="blog-list-tag"><a href="{{ site.baseurl }}/tags#{{ post.tags }}">{{ post.tags }}</a></div>
-                <div class="blog-list-title"> <a href="{{ post.url | relative_url }}">{{ post.title }}</a></div>
+                <div class="blog-list-title"> <a href="{{ post.url }}">{{ post.title }}</a></div>
                 <div class="blog-list-excerpt">{{ post.excerpt }}</div>
             </li>
 
