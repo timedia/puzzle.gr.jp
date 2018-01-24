@@ -2,36 +2,42 @@
 layout: default
 ---
 
-<article class="contents page">
-    <div class="container">
-  
-      <div class="page__header">
-        <h1 class="page__title">{{ page.title }}</h1>
-        <p class="page__date">{{ page.date | date: '%B %d, %Y' }}</p>
-      </div>
-  
-      <div class="page__body">
-  
-  
-        {{ content }}
-  
-  
-      </div><!--page__body-->
-  
-      <!-- 前後のページへのリンクを表示したい -->
-      <div class="pager">
-  
-        <p class="pager__item--next">
-          <a href="">&lt; 次のページ</a>
-        </p>
-  
-        <p class="pager__item--prev">
-          <a href="">前のページ &gt;</a>
-        </p>
-  
-      </div><!--pager-->
-      
-    </div><!--container-->
-</article><!--page-->
+<div class="catch blog">
 
-{%- include post_meta.html -%}
+  {%- include header.html -%}
+
+  <div class="container">
+      <h2 class="sunbpage-title">ニュース &amp; ブログ</h2>
+      <p>PUZZLE GENERATOR JAPAN の様々な情報をお届けします。</p>
+  </div>
+
+</div>
+
+<div class="row container">
+  <div class="col-lg-9">
+    <div class="blog-article-header">
+        <span class="blog-article-date">{{ page.date | date: '%Y-%m-%d' }}</span>
+        <span class="blog-article-category">{{ page.tags }}</span>
+        <h3>{{ page.title }}</h3>
+    </div>
+    <div class="blog-article article">
+
+        {{ content }}
+
+    </div>
+  </div>
+  <div class="col-lg-3 blog-side-nav">
+
+      <div class="blog-side-nav-category">
+          <h3 class="blog-side-nav-title"><a href="{{ site.baseurl }}/tags">Tags</a></h3>
+          {%- include tag_cloud.html -%}
+
+      </div>
+
+      <div class="blog-side-nav-archive">
+          <h3 class="blog-side-nav-title"><a href="{{ site.baseurl }}/Archive">Archive</a></h3>
+          {%- include post_archive.html -%}
+      </div>
+
+  </div>
+</div>
