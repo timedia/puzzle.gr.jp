@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article class="contents page">
+    <div class="container">
+  
+      <div class="page__header">
+        <h1 class="page__title">{{ page.title }}</h1>
+        <p class="page__date">{{ page.date | date: '%B %d, %Y' }}</p>
+      </div>
+  
+      <div class="page__body">
+  
+  
+        {{ content }}
+  
+  
+      </div><!--page__body-->
+  
+      <!-- 前後のページへのリンクを表示したい -->
+      <div class="pager">
+  
+        <p class="pager__item--next">
+          <a href="">&lt; 次のページ</a>
+        </p>
+  
+        <p class="pager__item--prev">
+          <a href="">前のページ &gt;</a>
+        </p>
+  
+      </div><!--pager-->
+      
+    </div><!--container-->
+</article><!--page-->
+
+{%- include post_meta.html -%}
