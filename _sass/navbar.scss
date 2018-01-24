@@ -1,0 +1,69 @@
+nav {
+
+    &.navbar {
+        @media (min-width: $lg-min-width) {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .navbar-brand {
+            color: $color-font-white;
+            transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+        }
+
+        .navbar-nav {
+            @media (min-width: $lg-min-width) {
+                position: absolute;
+                right: 1rem;
+                top: 1.5rem;
+            }
+
+            .nav-item {
+                @media (min-width: $lg-min-width) {
+                    padding-right: 1.5rem;
+                    transition: all 0.3s ease;
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                }
+
+                &:last-child {
+                    @media (min-width: $lg-min-width) {
+                        padding-right: 0;
+                    }
+                }
+
+                .nav-link {
+                    color: $color-font-white;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &.nav-smaller {
+        background-color: $color-font;
+
+        @media (min-width: $lg-min-width) {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+            font-size: .8rem;
+        }
+
+        .navbar-brand {
+            @media (min-width: $lg-min-width) {
+            font-size: 1rem;
+            }
+        }
+
+        .navbar-nav {
+            @media (min-width: $lg-min-width) {
+                top: .5rem;
+            }
+        }
+    }
+}
