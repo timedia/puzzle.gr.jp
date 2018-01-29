@@ -25,7 +25,7 @@
             margin-bottom: 1rem;
 
             @media (min-width: $md-min-width) {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
 
             @media (min-width: $md-min-width) {
@@ -37,6 +37,7 @@
             color: $color-font-white;
             text-shadow: 0 0 15px rgba(0, 0, 0, .5);
             margin-bottom: 1rem;
+            
             @media (min-width: $lg-min-width) {
                 font-size: 1.2rem;
             }
