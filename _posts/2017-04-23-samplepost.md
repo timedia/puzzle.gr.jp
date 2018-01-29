@@ -45,8 +45,8 @@ tags: News
 >> 
 >> 二重引用テキスト二重引用テキスト二重引用テキスト二重引用テキスト
 
-### 見出し4
-#### 見出し5
+#### 見出し4
+##### 見出し5
 
 - リスト1
     - ネスト リスト1_1
@@ -64,8 +64,7 @@ tags: News
 
 インストールコマンドは `gem install hoge` です
 
-normal *italic* normal
-
+normal *italic* normal<br>
 normal **bold** normal
 
 normal ***bold*** normal
@@ -79,7 +78,7 @@ normal ***bold*** normal
 
 ***
 
-　|header1|header2|header3|
+|header1|header2|header3|
 |:--|--:|:--:|
 |align left|align right|align center|
 |a|b|c|

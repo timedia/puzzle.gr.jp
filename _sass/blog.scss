@@ -110,51 +110,153 @@
 /*--------------------------------------------------------------------------------------------------------------------
    @group article
 ---------------------------------------------------------------------------------------------------------------------*/
-.article {
 
-        h1,h2,h3,h4,h5 {
-            margin-bottom: 1.5rem;
-            margin-top: 1.5rem;
+.blog-article {
+    padding-top: 3rem;
+    margin:auto;
+
+    @media(min-width: $lg-min-width) {
+        padding-top: 4rem;
+    }
+
+    .col-lg-9 {
+        border: 1px solid rgba($color-font-gray, .2);
+        padding: .8rem;
+        position: relative;
+
+        .blog-list-link {
+            position: absolute;
+            top: -2rem;
+            left: 0.5rem;
+            color: $color-font-gray;
+            font-size: .8rem;
         }
 
-        h1 {
-            border-bottom: 5px solid $color-blue;
+        @media (min-width: $md-min-width) {
+            padding: 1.2rem;
         }
 
-        h2 {
-            border-bottom: 2.5px solid $color-blue;
+        @media (min-width: $md-min-width) {
+            padding: 1.8rem;
         }
 
-        h3 {
-            border-left : 5px solid $color-blue;
-            padding-left: 0.5rem;
-        }
+        .blog-post {
 
-        p {
-            margin-bottom: 1.5rem;
-        }
+            line-height: 1.9;
 
-        blockquote {
-            border-left: 5px solid rgba(0, 0, 0, .2);
-            padding-left: 1rem;
-        }
+            h1,h2,h3,h4,h5 {
+                margin-bottom: 1.5rem;
+                margin-top: 1.5rem;
+            }
 
-        hr {
-            margin-bottom: 2rem;
-            margin-top: 2rem;
-        }
+            h1 {
+                border-bottom: 3px solid $color-blue;
+                font-size: 1.5rem;
+                padding-bottom: 0.25rem;
+            }
 
-        ul {
+            h2 {
+                border-left : 25px solid $color-blue;
+                padding-left: 0.5rem;
+                font-size: 1.3rem;
+            }
 
-            li {
-            list-style-type: disc;
+            h3 {
+                border-left : 10px solid $color-blue;
+                padding-left: 0.5rem;
+                font-size: 1.1rem;
+            }
+
+            h4,h5,h6 {
+                font-weight: bold;
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+
+            blockquote {
+                border-left: 5px solid rgba(0, 0, 0, .2);
+                padding-left: 1rem;
+            }
+
+            hr {
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+            }
 
             ul {
+
+                padding-left: 1.8rem;
+                padding-right: 1.8rem;
+
                 li {
-                    list-style-type: circle;
+                list-style-type: disc;
+
+                ul {
+                    li {
+                        list-style-type: circle;
+                        }
+                    }
                 }
             }
+
+            th {
+                border: 1px solid rgba($color-font-gray, .2);
+                color: $color-blue;
+
+            }
+
+            td {
+                border: 1px solid rgba($color-font-gray, .2);
+                padding-right: 1rem;
+                padding-left: 1rem;
+
+            }
         }
+
+        .blog-article-header {
+            border-bottom: 1px solid rgba($color-font-gray, .1);
+            margin-bottom: 1rem;
+
+            .blog-date-wrapper {
+                text-align: right;
+
+                .blog-date {
+                    display: inline;
+                    color: $color-font-gray;
+                    font-size: 0.8rem;
+                    text-align: left;
+                }
+            }
+
+            .blog-tag {
+                background-color: $color-blue;
+                display: inline;
+                padding: .25rem 1rem;
+                font-size: 0.8rem;
+                color: $color-font-white;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+                border:none;
+                font-weight: bold;
+                line-height: 1.5;
+                margin-bottom: .75rem;
+                margin-top: 1rem;
+
+                @media (min-width: $lg-min-width) {
+                    font-size: 1.5rem;
+
+                }
+            }
+            
+        }
+
     }
 
 }
