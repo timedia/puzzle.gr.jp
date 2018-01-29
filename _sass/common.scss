@@ -9,21 +9,10 @@ body {
     padding-bottom: 5rem;
 }
 
-.section-title {
-    padding-bottom: 0.85rem;
-    margin: 0;
-    text-align: center;
-}
+a {
+    color: $color-font;
 
-.section-title-caption { 
-    margin-bottom: 2rem;
-}
-
-.section-title-border {
-    display: block;
-    width: 70px;
-    height: 7.5px;
-    background-color: $color-orange;
-    margin: 0 auto 1rem;
-    border-radius: 3.75px;
+    :hover {
+        color: $color-blue;
+    }
 }

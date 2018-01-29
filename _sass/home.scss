@@ -1,0 +1,170 @@
+.section-title {
+    padding-bottom: 0.85rem;
+    margin: 0;
+    text-align: center;
+}
+
+.section-caption { 
+    margin-bottom: 2rem;
+}
+
+.section-title-border {
+    display: block;
+    width: 70px;
+    height: 7.5px;
+    background-color: $color-orange;
+    margin: 0 auto 1rem;
+    border-radius: 3.75px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------
+   @group member section
+--------------------------------------------------------------------------------------------------------------------*/
+
+.member-section {
+    text-align: center;
+
+    .member {
+        padding-top: 3rem;
+
+        .member-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 125px;
+            margin-bottom: 1.5rem;
+        }
+    
+        .member-name {
+            margin-bottom: 1rem
+        }
+
+        .member-description {
+            max-width: 300px;
+            margin: auto;
+
+        }
+
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------
+   @group news section
+--------------------------------------------------------------------------------------------------------------------*/
+
+.news-section {
+    text-align: center;
+
+    .btn {
+        background-color: $color-font;
+        color: $color-font-white;
+        font-weight: bold
+    }
+}
+
+.news-list {
+    padding: 2rem 0;
+    font-size: .85rem;
+    margin-bottom: 0;
+
+    @media (min-width: $md-min-width) {
+        font-size: 1rem;
+    }
+
+    @media (min-width: $lg-min-width) {
+        padding: 4rem 2rem 2rem;
+    }
+
+    .news-item {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        list-style: none;
+        padding: .85rem .5rem;
+
+        &:last-child {
+            border-bottom: none;
+
+        }
+
+        @media (min-width: $lg-min-width){
+            padding: 1rem 2rem;
+        }
+
+
+        div {
+            &.news-date {
+                color: rgba(0, 0, 0, .5);
+                display: table-cell;
+                padding-right: .5rem;
+                
+                @media (min-width: $lg-min-width){
+                    padding-right: 1.5rem;
+                }
+
+            }
+
+            &.news-category {
+                border: 1px solid $color-orange;
+                color: $color-orange;
+                width: 9rem;
+                display: table-cell;
+                padding: .1rem 0;
+                text-align: center;
+
+            }
+
+            &.news-title {
+                font-weight: bold;
+                text-align: left;
+                margin-top: .5rem;
+
+                @media (min-width: $md-min-width) {
+                    display: table-cell;
+                    padding-left: .5rem;
+                }
+
+                @media (min-width: $lg-min-width)  {
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------
+   @group exampele section
+---------------------------------------------------------------------------------------------------------------------*/
+
+.example-section {
+    text-align: center;
+
+    .example-list {
+        padding: 2rem 0;
+
+        @media (min-width: $lg-min-width) {
+            padding: 4rem 2rem;
+        }
+        
+        .example-content {
+            list-style: none;
+            padding: 0.5rem;
+
+            @media (min-width: $md-min-width) {
+                padding: 1rem;
+            }
+
+            img {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .example-content-name {
+                color: $color-font-gray;
+                font-size: 0.85rem;
+
+                @media (min-width: $lg-min-width) {
+                    font-size: 1rem;
+                }
+
+            }
+        }
+    }
+}
