@@ -1,0 +1,117 @@
+.home-header {
+    background-image: linear-gradient(-135deg, rgba(12, 98, 135, 0.22) 0%, rgba(61, 45, 234, 0.21) 100%), url(../images/header/home-header.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        text-align: center;
+        padding-top: 8rem;
+
+        @media (min-width: $md-min-width) {
+            padding-top: 10rem;
+            padding-bottom: 7rem;
+        }
+
+        @media (min-width: $xl-min-width) {
+            padding-top: 15rem;
+            padding-bottom: 10rem;
+        }
+
+        h1 {
+            color: $color-font-white;
+            font-weight: bold;
+            text-shadow: 0 0 30px rgba(0, 0, 0, .5);
+            margin-bottom: 1rem;
+
+            @media (min-width: $md-min-width) {
+                font-size: 3rem;
+            }
+
+            @media (min-width: $md-min-width) {
+                font-size: 4rem;
+            }
+        }
+
+        p {
+            color: $color-font-white;
+            text-shadow: 0 0 15px rgba(0, 0, 0, .5);
+            margin-bottom: 1rem;
+            @media (min-width: $lg-min-width) {
+                font-size: 1.2rem;
+            }
+        }
+
+        a.btn {
+            background-color: $color-orange;
+            color: $color-font-white;
+            font-weight: bold;
+
+            @media (min-width: $md-min-width) {
+                font-size: 1.25rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+    }
+}
+
+.page-header{
+    padding-bottom: 0;
+
+    &.blog-header {
+        background-color: $color-blue;
+    }
+
+    &.faq-header {
+        background-color: $color-blue;
+    }
+
+    .container {
+        padding-top: 5.5rem;
+        padding-bottom: 2.4rem;
+        text-align: center;
+
+        @media (min-width: $md-min-width) {
+            padding-top: 7rem;
+            padding-bottom: 3.5rem;
+        }
+
+        @media (min-width: $md-min-width) {
+            padding-top: 9.5rem;
+            padding-bottom: 5rem;
+        }
+
+    
+        h1 {
+            font-size: 1.5rem;
+            color: $color-font-white;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(0, 0, 0, .5);
+
+            @media (min-width: $md-min-width) {
+                font-size: 2.5rem;
+                margin-bottom: 0.8rem;
+            }
+
+        }
+
+        p {
+            font-size: 0.7rem;
+            color: $color-font-white;
+            width: 230px;
+            margin: auto;
+
+            @media (min-width: $md-min-width) {
+                width: auto;
+                font-size: 0.9rem;
+            }
+
+            @media (min-width: $lg-min-width) {
+                width: auto;
+                font-size: 1rem;
+            }
+        }
+    }
+}
