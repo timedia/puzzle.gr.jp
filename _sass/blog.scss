@@ -27,16 +27,15 @@
     
             li {
                 padding: 0;
-                font-size: .85rem;
+                font-size: 0.85rem;
             }
         }
     
         h4 {
             margin-bottom: .25rem;
-            color: rgba($color-font-gray, .7);
+            color: $color-font-gray;
             font-size: .85rem;
             padding-left: .5rem;
-            font-weight: bold;
         }
     }
 }
