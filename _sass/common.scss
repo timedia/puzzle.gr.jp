@@ -62,11 +62,20 @@ h2.sunbpage-title {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding-bottom: 7rem;
 
     .container {
         text-align: center;
-        padding-top: 15rem;;
+        padding-top: 8rem;
+
+        @media (min-width: $md-min-width) {
+            padding-top: 10rem;
+            padding-bottom: 7rem;
+        }
+
+        @media (min-width: $xl-min-width) {
+            padding-top: 15rem;
+            padding-bottom: 10rem;
+        }
 
         h1 {
             color: $color-font-white;
