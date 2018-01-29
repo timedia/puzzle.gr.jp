@@ -5,14 +5,26 @@ body {
 }
 
 .container {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    margin-bottom: auto;
+
+    @media (min-width: $md-min-width) {
+        padding: 2rem 1rem;
+        width: 100%;
+    }
+
+    @media (min-width: $lg-min-width) {
+        padding: 4rem 1rem;
+        max-width: 1140px;
+    }
+
 }
 
 a {
     color: $color-font;
 
     :hover {
-        color: $color-blue;
+        text-decoration: none;
     }
 }

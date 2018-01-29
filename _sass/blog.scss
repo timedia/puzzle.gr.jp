@@ -1,3 +1,7 @@
+.blog-page {
+    margin: auto;
+}
+
 .blog-side-nav {
     display: none;
 
@@ -6,18 +10,19 @@
         display: block;
         padding-left: 2rem;
 
+        .blog-side-nav-tag {
+            margin-bottom: 1rem;
+        }
+
         .blog-side-nav-title {
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: .5rem;
-    
-            a {
-                color: $color-blue;
-            }
+            color: $color-blue;
         }
     
         ul {
-            padding: 0 0 0 1rem;
+            padding: 0 0 0 .5rem;
             margin-bottom: .5rem;
     
             li {
@@ -28,54 +33,76 @@
     
         h4 {
             margin-bottom: .25rem;
-            color: $color-font-gray;
-            padding-left: 1rem;
+            color: rgba($color-font-gray, .7);
             font-size: .85rem;
+            padding-left: .5rem;
+            font-weight: bold;
         }
     }
 }
 
 .blog-list {
 
-    .blog-list-item {
+    border: 1px solid rgba($color-font-gray, .1);
 
-        margin-bottom: 2rem;
-        padding: 1rem;
-        -webkit-box-shadow: 10px 10px 6px -6px rgba(#777, .2);
-        box-shadow: 10px 10px 6px -6px rgba(#777, .2);
-        border-radius: .5rem;
-        
+    a {
+        border-bottom: 1px solid rgba($color-font-gray, .2);
+        display: block;
 
-        .blog-list-date {
-            display: table-cell;
-            color: $color-font-gray;
-            padding-right: 1rem;
+        &:last-child {
+            border-bottom: none;
         }
 
-        .blog-list-tag {
-            display: table-cell;
-            background-color: $color-blue;
-            padding: 0.15rem 1rem;
-            border-radius: 5px;
 
-            a {
+        &:hover {
+            text-decoration: none;
+            color: $color-font;
+            background-color: rgba($color-font-gray, .1);
+            display: block;
+        }
+
+        li.blog-list-item {
+            padding: .8rem;
+
+            @media (min-width: $md-min-width) {
+                padding: 1.2rem;
+            }
+
+            @media (min-width: $md-min-width) {
+                padding: 1.8rem;
+            }
+
+            .blog-date-wrapper {
+                text-align: right;
+    
+                .blog-date {
+                    display: inline;
+                    color: $color-font-gray;
+                    font-size: 0.8rem;
+                    text-align: left;
+                }
+            }
+    
+            .blog-tag {
+                background-color: $color-blue;
+                display: inline;
+                padding: .25rem 1rem;
+                font-size: 0.8rem;
                 color: $color-font-white;
             }
-        }
-
-        .blog-list-title {
-            font-size: 1.2rem;
-            margin-top: .75rem;
-            font-weight: bold;
-
-            a {
-                color: $color-blue;
+    
+            .blog-list-title {
+                font-size: 1.2rem;
+                margin-top: .75rem;
+                margin-bottom: .5rem;
+                font-weight: bold;
+    
             }
-        }
-
-        .blog-list-excerpt {
-            margin-top: .5rem;
-
+    
+            .blog-list-excerpt p {
+                margin: 0;
+    
+            }
         }
     }
 }

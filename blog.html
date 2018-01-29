@@ -14,19 +14,27 @@ title: ニュース &amp; ブログ
 
 </header>
 
-<div class="row container">
+<div class="row container blog-page">
 
     <div class="col-lg-9 blog-list">
         <ul>
 
             {% for post in site.posts %}
 
-            <li class="blog-list-item">
-                <div class="blog-list-date"><time>{{ post.date | date: '%Y-%m-%d' }}</time></div>
-                <div class="blog-list-tag"><a href="{{ site.baseurl }}/tags#{{ post.tags }}">{{ post.tags }}</a></div>
-                <div class="blog-list-title"> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
-                <div class="blog-list-excerpt">{{ post.excerpt }}</div>
-            </li>
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <li class="blog-list-item">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="blog-tag">{{ post.tags }}</div>
+                        </div>
+                        <div class="col-6 blog-date-wrapper">
+                            <div class="blog-date"><time>{{ post.date | date: '%Y-%m-%d' }}</time></div>
+                        </div>
+                    </div>
+                    <div class="blog-list-title">{{ post.title }}</div>
+                    <div class="blog-list-excerpt">{{ post.excerpt }}</div>
+                </li>
+            </a>
 
             {% endfor %}
 
@@ -35,14 +43,14 @@ title: ニュース &amp; ブログ
     
     <div class="col-lg-3 blog-side-nav">
 
-        <div class="blog-side-nav-category">
-            <h3 class="blog-side-nav-title"><a href="{{ site.baseurl }}/tags">Tags</a></h3>
+        <div class="blog-side-nav-tag">
+            <h3 class="blog-side-nav-title">Tags</h3>
             {%- include tag_cloud.html -%}
 
         </div>
 
         <div class="blog-side-nav-archive">
-            <h3 class="blog-side-nav-title"><a href="{{ site.baseurl }}/Archive">Archive</a></h3>
+            <h3 class="blog-side-nav-title">Archive</h3>
             {%- include post_archive.html -%}
         </div>
 
