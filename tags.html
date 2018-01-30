@@ -4,32 +4,68 @@ title: Post tags
 permalink: /tags
 ---
 
-{% assign tag_names = "" | split: "|"  %}
+<header class="page-header blog-header">
 
-{% for posts_by_tag in site.tags %}
-  {% assign tag_names = tag_names | push: posts_by_tag.first %}
-{% endfor %}
+    {%- include navbar.html -%}
 
-{% assign tag_names = tag_names | sort %}
-
-{% include tag_cloud.html tag_names=tag_names %}
-
-<hr>
-
-<section class="posts-by-tags">
-  {% for tag_name in tag_names %}
-
-    <div>
-      <h3 id="{{ tag_name }}">
-        {{ tag_name | capitalize | replace: "_", " " }}
-      </h3>
-
-      {% for post in site.tags[tag_name] %}
-        <a href="{{ post.url | prepend: baseurl }}">
-          {{ post.title }}
-        </a>
-      {% endfor %}
+    <div class="container">
+        <h1>NEWS &amp; BLOG</h1>
+        <p>PUZZLE GENERATOR JAPAN の様々な情報をお届けします。</p>
     </div>
 
-  {% endfor %}
-</section>
+</header>
+
+<div class="row container blog-page tags">
+
+    <div class="col-lg-9">
+
+      <a class="blog-list-link" href="{{ '/blog.html' | relative_url }}">>> 一覧にもどる</a>
+      
+      <div class="tag-list">
+
+        {% assign tag_names = "" | split: "|"  %}
+        {% for posts_by_tag in site.tags %}
+          {% assign tag_names = tag_names | push: posts_by_tag.first %}
+        {% endfor %}
+
+      </div>
+
+      <div>
+
+        {% for tag_name in tag_names %}
+
+          <div>
+            <h3 class="tag-name" id="{{ tag_name }}">
+              {{ tag_name }}
+            </h3>
+            <div class="blog-list">
+              <ul>
+                {% for post in site.tags[tag_name] %}
+                  <a href="{{ post.url | prepend: site.baseurl }}">
+                      <li class="blog-list-item">
+                          <div class="row">
+                              <div class="col-6">
+                                  <div class="blog-tag">{{ post.tags }}</div>
+                              </div>
+                              <div class="col-6 blog-date-wrapper">
+                                  <div class="blog-date"><time>{{ post.date | date: '%Y-%m-%d' }}</time></div>
+                              </div>
+                          </div>
+                          <div class="blog-list-title">{{ post.title }}</div>
+                          <div class="blog-list-excerpt">{{ post.excerpt }}</div>
+                      </li>
+                  </a>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+        {% endfor %}
+        </div>
+
+    </div>
+  
+    {%- include blog-side-nav.html -%}
+  
+  </div>
+

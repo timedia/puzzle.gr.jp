@@ -116,6 +116,14 @@
    @group article
 ---------------------------------------------------------------------------------------------------------------------*/
 
+.blog-list-link {
+    position: absolute;
+    top: -2rem;
+    left: 0.5rem;
+    color: $color-font-gray;
+    font-size: .8rem;
+}
+
 .blog-article {
     padding-top: 3rem;
     margin:auto;
@@ -128,14 +136,6 @@
         border: 1px solid rgba($color-font-gray, .2);
         padding: .8rem;
         position: relative;
-
-        .blog-list-link {
-            position: absolute;
-            top: -2rem;
-            left: 0.5rem;
-            color: $color-font-gray;
-            font-size: .8rem;
-        }
 
         @media (min-width: $md-min-width) {
             padding: 1.2rem;

@@ -1,0 +1,19 @@
+.tags {
+    padding-top: 3rem;
+    margin:auto;
+
+    @media(min-width: $lg-min-width) {
+        padding-top: 4rem;
+    }
+
+    .tag-name {
+        font-size: 1rem;
+        margin-bottom: 0.5rem; 
+        font-weight: bold;
+    }
+
+    .blog-list {
+        margin-bottom: 1.5rem;
+
+    }
+}
