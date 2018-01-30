@@ -1,0 +1,28 @@
+.faq-content {
+
+    .faq-header {
+
+        a {
+            display: block;
+            padding: 1rem;
+            border-bottom: 1px solid rgba($color-font-gray, .2);
+            font-size: 1.2rem;
+            color: $color-font;
+            font-weight: bold;
+
+            &:hover {
+                text-decoration: none;
+                background-color: rgba($color-font-gray, .1)
+            }
+
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .faq-body {
+        padding: 1.5rem 1rem;
+        
+    }
+}
